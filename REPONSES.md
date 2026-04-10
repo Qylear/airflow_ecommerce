@@ -58,11 +58,36 @@ il sera répliqué 3 fois sur 3Datanodes différents et façon enchainé (Client
 pas de données corrompues visibles, et uniquement en lecture
 
 
+1. `docker compose ps` — tous les conteneurs running/healthy
+   <img width="1910" height="138" alt="image" src="https://github.com/user-attachments/assets/70f06d5c-9a64-46dc-a8d7-59105c648dfa" />
+
+2. `docker exec namenode hdfs dfsadmin -report` — 1 DataNode Live
+
+   <img width="833" height="720" alt="image" src="https://github.com/user-attachments/assets/dc40780e-2f32-40e9-9ddd-24ade9b60029" />
+
+3. HDFS Web UI (http://localhost:9870) — Browse Directory /data/ecommerce/logs/raw/
+
+   <img width="1185" height="313" alt="image" src="https://github.com/user-attachments/assets/0e3b6a08-fa03-477a-b149-f0c237bb9c4d" />
+
+4. Airflow UI — Vue Graph du DAG logs_ecommerce_dag (8 tâches)
+
+   <img width="1541" height="198" alt="image" src="https://github.com/user-attachments/assets/6074204c-1b7c-4dde-8c55-01ca1510ba3e" />
+
+5. Airflow UI — Exécution complète avec les 2 branches (une verte, une grisée)
+ 
+    <img width="474" height="175" alt="image" src="https://github.com/user-attachments/assets/197a23be-ece7-428d-9db7-7b911a9b1cb7" />
+    
+6. Logs de analyser_logs_hdfs — status codes et Top 5 URLs
+
+    <img width="626" height="197" alt="image" src="https://github.com/user-attachments/assets/8d775953-1b6b-4e2d-a96a-b9ce2f328bc9" />
+
+7. HDFS Web UI — fichier dans /data/ecommerce/logs/processed/
+
+  <img width="1247" height="376" alt="image" src="https://github.com/user-attachments/assets/cb63e663-a14c-4dd8-91d3-519eaf2a8743" />
 
 
 
 
 
 
-<img width="474" height="175" alt="image" src="https://github.com/user-attachments/assets/197a23be-ece7-428d-9db7-7b911a9b1cb7" />
 
